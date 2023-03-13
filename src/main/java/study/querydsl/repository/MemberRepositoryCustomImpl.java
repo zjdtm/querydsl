@@ -73,8 +73,7 @@ public class MemberRepositoryCustomImpl implements MemberRepositoryCustom{
                         teamNameEq(condition.getTeamName()),
                         ageGoe(condition.getAgeGoe()),
                         ageLoe(condition.getAgeLoe())
-                )
-                .fetchOne();
+                ).fetchOne();
 
         return new PageImpl<>(content, pageable, total);
     }
